@@ -18,7 +18,7 @@
     Modified 4/2011 R.McGinnis
     ------------------------------------------------------- */
 
-#include "WProgram.h"
+#include "Arduino.h"
 #include "NewSoftSerial.h"
 #include "PgmChange.h"
 

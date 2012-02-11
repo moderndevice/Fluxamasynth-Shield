@@ -34,8 +34,7 @@ http://arduiniana.org.
 // 
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
-#include "WConstants.h"
-#include "pins_arduino.h"
+#include "Arduino.h"
 #include "NewSoftSerial.h"
 //
 // Lookup table
@@ -392,10 +391,10 @@ uint8_t NewSoftSerial::available(void)
   return (_receive_buffer_tail + _NewSS_MAX_RX_BUFF - _receive_buffer_head) % _NewSS_MAX_RX_BUFF;
 }
 
-void NewSoftSerial::write(uint8_t b)
+size_t NewSoftSerial::write(uint8_t b)
 {
   if (_tx_delay == 0)
-    return;
+    return 0;
 
   activate();
 
