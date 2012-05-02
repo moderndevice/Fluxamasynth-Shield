@@ -7,7 +7,6 @@
 #include <Fluxamasynth.h>
 #include <PgmChange.h>
 
-// #include "Fluxamasynth.h"
 
     Fluxamasynth synth = Fluxamasynth();
 
