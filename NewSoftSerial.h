@@ -67,7 +67,6 @@ private:
   // private methods
   void recv();
   bool activate();
-  virtual size_t write(uint8_t byte);
   uint8_t rx_pin_read();
   void tx_pin_write(uint8_t pin_state);
 
@@ -79,6 +78,7 @@ public:
   NewSoftSerial(uint8_t receivePin, uint8_t transmitPin);
   void setTX(uint8_t transmitPin);
   void setRX(uint8_t receivePin);
+	virtual size_t write(uint8_t byte);
   void begin(long speed);
   int read();
   uint8_t available(void);

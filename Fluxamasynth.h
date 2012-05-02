@@ -36,8 +36,8 @@ class Fluxamasynth
     Fluxamasynth();
     // constructor with 2 parameters sets NewSoftSerial's accordingly
     Fluxamasynth(byte rxPin, byte txPin);
-    void fluxWrite(byte c);
-    void fluxWrite(byte *buf, int cnt);
+    virtual size_t fluxWrite(byte c);
+    virtual size_t fluxWrite(byte *buf, int cnt);
     void noteOn(byte channel, byte pitch, byte velocity);
     void noteOff(byte channel, byte pitch);
     void programChange (byte bank, byte channel, byte v);

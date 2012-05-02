@@ -38,14 +38,14 @@ void Fluxamasynth::begin() {
     }
 }
 
-void Fluxamasynth::fluxWrite(byte c) {
+ size_t Fluxamasynth::fluxWrite(byte c) {
     if (!(this->synthInitialized)){
         this->begin();
     }
     this->synth.write(c);
 }
 
-void Fluxamasynth::fluxWrite(byte *buf, int cnt) {
+ size_t Fluxamasynth::fluxWrite(byte *buf, int cnt) {
     int  i;
     
     if (!this->synthInitialized){
