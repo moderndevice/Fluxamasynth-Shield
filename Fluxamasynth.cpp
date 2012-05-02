@@ -42,7 +42,7 @@ void Fluxamasynth::fluxWrite(byte c) {
     if (!(this->synthInitialized)){
         this->begin();
     }
-    this->synth.print(c);
+    this->synth.write(c);
 }
 
 void Fluxamasynth::fluxWrite(byte *buf, int cnt) {
@@ -52,7 +52,7 @@ void Fluxamasynth::fluxWrite(byte *buf, int cnt) {
         this->begin();
     }
     for (i=0; i<cnt; i++) {
-        this->synth.print(buf[i]);
+        this->synth.write(buf[i]);
     }
 }
 
