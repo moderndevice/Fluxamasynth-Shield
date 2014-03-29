@@ -22,7 +22,11 @@
 #include "Fluxamasynth.h"
 #include "NewSoftSerial.h"
 
-Fluxamasynth::Fluxamasynth() : synth(255, 4) {                   // 255 -> do not use rx; pin 4 for tx
+// Test TX pin for Serial 3 for Mega
+// This may allow for using serial ports but will not use hardware serial support
+// In most cases the speed hit will not be great enough to be a large tradeoff
+                                                                  
+Fluxamasynth::Fluxamasynth() : synth(255, 4) {      // was synth(255, 4)   // 255 -> do not use rx; pin 4 for tx
     synthInitialized = 0;                                        // Initialization needs to be done
 }
 
